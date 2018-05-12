@@ -11,15 +11,16 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree' " file explorer
-Plug 'kien/ctrlp.vim' " file explorer
-Plug 'tpope/vim-fugitive' " file explorer
-Plug 'vim-syntastic/syntastic' " file explorer
+Plug 'kien/ctrlp.vim' " fuzzy file search
+Plug 'tpope/vim-fugitive' " git plugin
+Plug 'vim-syntastic/syntastic' " syntax checker
 
 " Initialize plugin system
 call plug#end() " Automatically executes 'filetype plugin indent on' and 'syntax enable'
 
 " NERD-Tree plugin config
 autocmd vimenter * NERDTree " open a NERDTree automatically when vim starts up
+autocmd vimenter * wincmd p " put focus back on previous window
 autocmd bufenter * if (winnr("$") == 1  
 			\ && exists("b:NERDTree")  
 				\ && b:NERDTree.isTabTree()) 
@@ -27,3 +28,4 @@ autocmd bufenter * if (winnr("$") == 1
 
 " Syntastic plugin config
 let g:syntastic_javascript_checkers = ['eslint']
+
