@@ -1,0 +1,7 @@
+# Set vi as the command-line editor
+set -o vi
+
+# Set vim as the editor of choice
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
