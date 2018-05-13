@@ -1,11 +1,9 @@
 " My vim settings
 :set relativenumber 
+:set ignorecase
+:set smartcase
  
-" Before using this .vimrc, install the 'vim-plug' plugin manager:
-"
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-" 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"
+" Install the 'vim-plug' plugin manager:
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
 				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
